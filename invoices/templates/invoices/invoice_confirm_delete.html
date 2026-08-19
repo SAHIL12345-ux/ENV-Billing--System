@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Invoice</title>
+</head>
+
+<body>
+
+    <h1>Delete Invoice</h1>
+
+    <h2>Are you sure?</h2>
+
+    <p>
+        Are you sure you want to delete
+        <strong>{{ invoice.invoice_number }}</strong>?
+    </p>
+
+    <p>
+        Customer: {{ invoice.customer_name }}
+    </p>
+
+    <p>
+        Amount: {{ invoice.amount }}
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <button type="submit">
+            Yes, Delete
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="{% url 'invoice_list' %}">
+        Cancel
+    </a>
+
+</body>
+</html>

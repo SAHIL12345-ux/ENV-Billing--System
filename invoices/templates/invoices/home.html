@@ -1,0 +1,141 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'invoices/style.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ENV Billing System</title>
+
+    <link rel="stylesheet"
+          href="{% static 'invoices/style.css' %}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>ENV Billing</h2>
+
+        <div>
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'invoice_list' %}">
+                Invoices
+            </a>
+
+            <a href="{% url 'create_invoice' %}">
+                Create Invoice
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>
+            Welcome to ENV Billing System
+        </h1>
+
+        <p>
+            Manage your invoices quickly and easily.
+        </p>
+
+        <a href="{% url 'invoice_list' %}"
+           class="btn primary">
+            View Invoices
+        </a>
+
+        <a href="{% url 'create_invoice' %}"
+           class="btn secondary">
+            Create New Invoice
+        </a>
+
+    </section>
+
+
+    <section class="features">
+
+        <h2>
+            Manage Your Billing Easily
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>📄 Create Invoice</h3>
+
+                <p>
+                    Create invoices by entering
+                    customer, amount and notes.
+                </p>
+
+                <a href="{% url 'create_invoice' %}"
+                   class="btn primary">
+                    Create
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📋 View Invoices</h3>
+
+                <p>
+                    View all your invoices and
+                    billing information.
+                </p>
+
+                <a href="{% url 'invoice_list' %}"
+                   class="btn primary">
+                    View
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>⚙️ Manage Invoices</h3>
+
+                <p>
+                    Update or delete existing
+                    invoices.
+                </p>
+
+                <a href="{% url 'invoice_list' %}"
+                   class="btn primary">
+                    Manage
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 ENV Billing System
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

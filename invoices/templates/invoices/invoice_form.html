@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Invoice</title>
+</head>
+
+<body>
+
+    <h1>ENV Billing System</h1>
+
+    <h2>Create Invoice</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Save Invoice
+        </button>
+
+    </form>
+      <br>
+      <a = href="{% url 'invoice_list' %}">
+      Back to voice List
+      </a>
+
+</body>
+</html>
+
+

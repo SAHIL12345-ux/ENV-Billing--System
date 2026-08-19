@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - ENV Billing</title>
+
+    <link rel="stylesheet"
+          href="{% static 'invoices/style.css' %}">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>ENV Billing System</h1>
+
+        <h2>Login</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
